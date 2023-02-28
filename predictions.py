@@ -13,7 +13,10 @@ def make_predictions(X, parameters):
     predictions = get_predictions(AL)
     return predictions
 
-def test_prediction(image, label, parameters):
-    predictions = make_predictions(image, parameters)
-    print(f'prediction: {predictions}')
-    print(f'label: {label}')
+def make_prediction(image, parameters):
+    print(image.shape)
+    prediction = make_predictions(image, parameters)
+    print(prediction)
+    return prediction[0]
+    # print(f'prediction: {predictions}')
+    # print(f'label: {label}')
